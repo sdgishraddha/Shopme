@@ -1,6 +1,7 @@
 package com.sportyshoesweb.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class UserService {
 		if (userRepository.findById(userId).isPresent()) {
 			return userRepository.findById(userId).get();
 		}
-		return null;
+		throw new NoSuchElementException();
 	}
 
 	public void deleteUserById(Integer userId) {

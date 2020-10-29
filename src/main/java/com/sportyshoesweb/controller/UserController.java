@@ -51,6 +51,7 @@ public class UserController {
 
 		if (userService.getUserById(userId) != null) {
 			user.setUserId(userId);
+			userService.saveUser(user);
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 

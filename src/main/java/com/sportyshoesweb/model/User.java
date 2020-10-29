@@ -1,6 +1,6 @@
 package com.sportyshoesweb.model;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,18 +12,20 @@ import javax.persistence.Table;
 @Table(name = "user_table")
 public class User {
 
-	private int userId;
+	private int userId = 0;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String phoneNumber;
 	private String password;
-	private short isAdmin;
-	private SimpleDateFormat lastLogin;
-	private SimpleDateFormat createdAt;
+	private Boolean isAdmin;
+	//private SimpleDateFormat lastLogin;
+	//private SimpleDateFormat createdAt;
+	private LocalDateTime lastLogin;
+	private LocalDateTime createdAt;
 
 	public User(int userId, String firstName, String lastName, String email, String phoneNumber, String password,
-			short isAdmin, SimpleDateFormat lastLogin) {
+			Boolean isAdmin, LocalDateTime lastLogin) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
@@ -36,7 +38,7 @@ public class User {
 	}
 
 	public User(int userId, String firstName, String lastName, String email, String phoneNumber, String password,
-			short isAdmin, SimpleDateFormat lastLogin, SimpleDateFormat createdAt) {
+			Boolean isAdmin, LocalDateTime lastLogin, LocalDateTime createdAt) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
@@ -51,7 +53,6 @@ public class User {
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Id
@@ -104,27 +105,27 @@ public class User {
 		this.password = password;
 	}
 
-	public short getIsAdmin() {
+	public Boolean getIsAdmin() {
 		return isAdmin;
 	}
 
-	public void setIsAdmin(short isAdmin) {
+	public void setIsAdmin(Boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
 
-	public SimpleDateFormat getLastLogin() {
+	public LocalDateTime getLastLogin() {
 		return lastLogin;
 	}
 
-	public void setLastLogin(SimpleDateFormat lastLogin) {
+	public void setLastLogin(LocalDateTime lastLogin) {
 		this.lastLogin = lastLogin;
 	}
 
-	public SimpleDateFormat getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(SimpleDateFormat createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
