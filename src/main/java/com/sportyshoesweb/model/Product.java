@@ -12,42 +12,24 @@ import javax.persistence.Table;
 @Table(name = "product_table")
 public class Product {
 
-	private Integer product_id;
+	private Integer product_id = 100;
 	private String product_name;
 	private String product_description;
 	private String product_vendor;
-	private Boolean instock;
-
-	public Product() {
-		super();
-	}
-
-	public Product(Integer product_id, String product_name, String product_description, String product_vendor,
-			Boolean instock, Double product_cost, String product_category, LocalDateTime created_at,
-			LocalDateTime updated_at) {
-		super();
-		this.product_id = product_id;
-		this.product_name = product_name;
-		this.product_description = product_description;
-		this.product_vendor = product_vendor;
-		this.instock = instock;
-		this.product_cost = product_cost;
-		this.product_category = product_category;
-		this.created_at = created_at;
-		this.updated_at = updated_at;
-	}
-
+	private Boolean in_stock;
 	private Double product_cost;
 	private String product_category;
 	private LocalDateTime created_at;
 	private LocalDateTime updated_at;
 
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getProduct_id() {
 		return product_id;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	public void setProduct_id(Integer product_id) {
 		this.product_id = product_id;
 	}
@@ -76,12 +58,12 @@ public class Product {
 		this.product_vendor = product_vendor;
 	}
 
-	public Boolean getInstock() {
-		return instock;
+	public Boolean getIn_stock() {
+		return in_stock;
 	}
 
-	public void setInstock(Boolean instock) {
-		this.instock = instock;
+	public void setIn_stock(Boolean in_stock) {
+		this.in_stock = in_stock;
 	}
 
 	public Double getProduct_cost() {
@@ -113,6 +95,26 @@ public class Product {
 	}
 
 	public void setUpdated_at(LocalDateTime updated_at) {
+		this.updated_at = updated_at;
+	}
+	
+
+	public Product() {
+		super();
+	}
+
+	public Product(Integer product_id, String product_name, String product_description, String product_vendor,
+			Boolean in_stock, Double product_cost, String product_category, LocalDateTime created_at,
+			LocalDateTime updated_at) {
+		super();
+		this.product_id = product_id;
+		this.product_name = product_name;
+		this.product_description = product_description;
+		this.product_vendor = product_vendor;
+		this.in_stock = in_stock;
+		this.product_cost = product_cost;
+		this.product_category = product_category;
+		this.created_at = created_at;
 		this.updated_at = updated_at;
 	}
 

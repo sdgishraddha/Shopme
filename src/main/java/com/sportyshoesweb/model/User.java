@@ -19,8 +19,6 @@ public class User {
 	private String phoneNumber;
 	private String password;
 	private Boolean isAdmin;
-	//private SimpleDateFormat lastLogin;
-	//private SimpleDateFormat createdAt;
 	private LocalDateTime lastLogin;
 	private LocalDateTime createdAt;
 
