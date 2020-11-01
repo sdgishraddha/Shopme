@@ -13,13 +13,31 @@ import javax.persistence.Table;
 public class Purchase {
 
 	private Integer purchaseId;
+
+//	@Column(name = "purchaseDate")
 	private LocalDateTime purchaseDate;
+
+//	@Column(name = "productId")
 	private Integer productId;
+
+ //	@Column(name = "userEmail")
 	private String userEmail;
+
+   // @Column(name = "paidAmount")
 	private Float paidAmount;
 
 	public Purchase() {
 		super();
+	}
+
+	public Purchase(Integer purchaseId, LocalDateTime purchaseDate, Integer productId, String userEmail,
+			Float paidAmount) {
+		super();
+		this.purchaseId = purchaseId;
+		this.purchaseDate = purchaseDate;
+		this.productId = productId;
+		this.userEmail = userEmail;
+		this.paidAmount = paidAmount;
 	}
 
 	@Id
