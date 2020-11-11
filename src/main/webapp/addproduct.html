@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+
+<style>
+.center {
+	margin: auto;
+	width: 60%;
+	border: 5px solid #eee;
+	padding: 10px;
+}
+</style>
+
+
+</head>
+<body>
+	<form method="POST" action="product">
+
+		<div class="center">
+
+			Name <input type="text"> <br> <br> Description <input
+				type="text"> <br> <br> Vendor <input type="text">
+			<br> <br> <input type="checkbox" name="instock"
+				value="true"> <label for="instock"> In Stock</label><br>
+			<br> Cost <input type="number"> <br> <br> <select
+				name="category">
+				<option value="sports">Sports</option>
+				<option value="ethnic">Ethnic</option>
+				<option value="kids">Kids</option>
+				<option value="electronics">Electronics</option>
+			</select> <br>
+			<br> <input type="button" value="Submit Record">
+
+
+		</div>
+
+
+
+
+	</form>
+
+
+
+</body>
+</html>
