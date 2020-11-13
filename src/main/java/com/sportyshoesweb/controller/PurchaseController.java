@@ -3,6 +3,7 @@ package com.sportyshoesweb.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sportyshoesweb.model.Purchase;
 import com.sportyshoesweb.repository.PurchaseRepository;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/purchase")
 public class PurchaseController {

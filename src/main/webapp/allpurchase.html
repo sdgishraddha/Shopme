@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Users</title>
+<style>
+table, th, td {
+	border: 1px solid orange;
+}
+
+th, td {
+	padding: 10px;
+}
+
+.center {
+	margin: auto;
+	width: 60%;
+	border: 5px solid #FFFF00;
+	padding: 10px;
+}
+</style>
+<script>
+var baseurl = "http://localhost:8080/purchase/";
+function loadPurchase(){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET",baseurl,true);
+	xmlhttp.onreadystatechange = function() {
+		if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+			var purchase = JSON.parse(xmlhttp.responseText);
+			
+			var tbltop = `<table>
+			               <tr>
+			               
+			                   <th>Purchase Id</th>
+			                   <th>Purchase Date</th>
+			                   <th>Product Id</th>
+			                   <th>Customer Email</th>
+			                   <th>Paid Amount</th>
+			                 
+			               </tr>`;
+			               
+			               var main = "";
+			               
+			               for(i = 0; i < purchase.length; i++){
+			            	   main += "<tr><td>"+purchase[i].purchaseId+"</td>"+
+			            	   "<td>"+purchase[i].purchaseDate+"</td>"+
+			            	   "<td>"+purchase[i].productId+"</td>"+
+			            	   "<td>"+purchase[i].userEmail+"</td>"+
+			           
+			            	   "<td>"+purchase[i].paidAmount+"</td></tr>";
+			               }
+			               var tblbottom = "</table>";
+			               var tbl = tbltop+main+tblbottom;
+			               document.getElementById("purchaseinfo").innerHTML = tbl;
+			               
+			               
+		}
+	};
+	xmlhttp.send();
+}
+
+window.onload = function(){
+	loadPurchase();
+};
+
+</script>
+
+
+</head>
+<body>
+	<div id="purchaseinfo" class="center"></div>
+</body>
+</html>
