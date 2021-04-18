@@ -1,8 +1,8 @@
-package com.sportyshoesweb.repository;
+package com.Shopme.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sportyshoesweb.model.Purchase;
+import com.Shopme.model.Purchase;
 
 public interface PurchaseRepository extends JpaRepository<Purchase, Integer> {
 

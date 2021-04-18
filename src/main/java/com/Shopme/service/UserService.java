@@ -1,4 +1,4 @@
-package com.sportyshoesweb.service;
+package com.Shopme.service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sportyshoesweb.model.User;
-import com.sportyshoesweb.repository.UserRepository;
+import com.Shopme.model.User;
+import com.Shopme.repository.UserRepository;
 
 @Service
 @Transactional

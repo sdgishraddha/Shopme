@@ -1,4 +1,4 @@
-package com.sportyshoesweb.controller;
+package com.Shopme.controller;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sportyshoesweb.model.User;
-import com.sportyshoesweb.service.UserService;
+import com.Shopme.model.User;
+import com.Shopme.service.UserService;
 
 @CrossOrigin
 @RestController

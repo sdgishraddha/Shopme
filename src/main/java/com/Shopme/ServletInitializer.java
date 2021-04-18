@@ -1,4 +1,4 @@
-package com.sportyshoesweb;
+package com.Shopme;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

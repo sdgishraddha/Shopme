@@ -1,4 +1,4 @@
-package com.sportyshoesweb.controller;
+package com.Shopme.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sportyshoesweb.model.Purchase;
-import com.sportyshoesweb.repository.PurchaseRepository;
+import com.Shopme.model.Purchase;
+import com.Shopme.repository.PurchaseRepository;
 
 @CrossOrigin
 @RestController

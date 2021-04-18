@@ -1,4 +1,4 @@
-package com.sportyshoesweb.model;
+package com.Shopme.model;
 
 import java.time.LocalDateTime;
 

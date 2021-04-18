@@ -1,4 +1,4 @@
-package com.sportyshoesweb.service;
+package com.Shopme.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sportyshoesweb.model.Purchase;
-import com.sportyshoesweb.repository.PurchaseRepository;
+import com.Shopme.model.Purchase;
+import com.Shopme.repository.PurchaseRepository;
 
 @Service
 @Transactional
